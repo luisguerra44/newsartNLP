@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        
+        
+    <link href="main.css" rel="stylesheet"></head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Udacity Evaluate News Articles and NLP Project
+            </div>
+            
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return handleSubmit(event)">
+                    <input id="name" type="text" name="input" value=""  placeholder="Type some sentence">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            <section>
+
+            <section>
+                <strong>Sentiment Analysis Results Using Aylien:</strong><br>
+                
+                <div id="text">text:</div><br>
+                <div id="polarity">polarity:</div><br>
+                <div id="polarity_confidence">polarity confidence:</div><br>
+                <div id="subjectivity">subjectivity:</div><br>
+                <div id="subjectivity_confidence">subjectivity confidence:</div>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        
+       <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
